@@ -39,14 +39,25 @@
     );
   }
 
-  function renderSlides(images, title) {
-    return images
+  function renderSlides(images, title, cover) {
+    var items = [];
+
+    if (cover) {
+      items.push(typeof cover === "string" ? { src: cover } : cover);
+    }
+
+    if (images && images.length) {
+      items = items.concat(images);
+    }
+
+    return items
       .map(function (img, index) {
         var src = typeof img === "string" ? img : img.src;
         var alt =
           typeof img === "string"
             ? title + " — project screenshot " + (index + 1)
             : img.alt || title;
+        var loading = index === 0 ? "eager" : "lazy";
 
         return (
           '<div class="swiper-slide">' +
@@ -54,7 +65,9 @@
           escapeHtml(src) +
           '" alt="' +
           escapeHtml(alt) +
-          '" class="img-fluid" loading="lazy">' +
+          '" class="img-fluid" loading="' +
+          loading +
+          '">' +
           "</div>"
         );
       })
@@ -283,6 +296,16 @@
       ? "<li><strong>Client</strong>: " + escapeHtml(project.client) + "</li>"
       : "";
 
+    var featuredInRow = project.featuredIn
+      ? "<li><strong>As seen on</strong>: " +
+        escapeHtml(project.featuredIn) +
+        "</li>"
+      : "";
+
+    var privatePortalRow = project.privatePortal
+      ? "<li><strong>Access</strong>: Private portal — staff and volunteer access only</li>"
+      : "";
+
     var statusRow = project.status
       ? "<li><strong>Status</strong>: " +
         '<span class="project-status-badge">' +
@@ -297,7 +320,8 @@
 
     document.getElementById("project-gallery-slides").innerHTML = renderSlides(
       project.images,
-      project.title
+      project.title,
+      project.cover
     );
 
     document.getElementById("project-info-sidebar").innerHTML =
@@ -312,6 +336,8 @@
       "</li>" +
       statusRow +
       clientRow +
+      featuredInRow +
+      privatePortalRow +
       linksHtml +
       "</ul>";
 

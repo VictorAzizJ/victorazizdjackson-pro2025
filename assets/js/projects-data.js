@@ -74,32 +74,43 @@ const projects = {
     title: "Plothole",
     category: "civic-intelligence",
     tagline:
-      "Civic infrastructure intelligence for contractors, cities, and communities.",
+      "Civic intelligence SaaS that helps contractors and townships across southeastern Pennsylvania turn public data into revenue — as seen on CodeTV's The Full Stack Show.",
     date: "2024 – Present",
-    status: "Piloting · In Development",
+    status: "Live · Piloting in SE Pennsylvania",
     piloting: true,
+    featuredIn: "CodeTV's The Full Stack Show",
     client: null,
     links: {
-      live: null,
+      live: "https://dev.getplothole.com/",
       github: null,
       caseStudy: null,
     },
     images: [
-      "assets/img/portfolio/portfolio-1.webp",
-      "assets/img/portfolio/portfolio-7.webp",
-      "assets/img/portfolio/portfolio-10.webp",
+      {
+        src: "assets/img/projects/plothole-hero.png",
+        alt: "Plothole homepage — Don't just chase RFPs. Write them, with live Philadelphia civic data on a map-first dashboard",
+      },
+      {
+        src: "assets/img/projects/plothole-live-data.png",
+        alt: "Live Philadelphia public data — open hazards, active demand zones, and corridors monitored across the pilot network",
+      },
+      {
+        src: "assets/img/projects/plothole-signals.png",
+        alt: "Live Signals dashboard — estimated work on the table, permit velocity, and civic demand by ZIP code",
+      },
     ],
     overview:
-      "Plothole is a civic intelligence platform that turns scattered public infrastructure data—311 reports, weather patterns, bid listings, grant signals, and maintenance records—into actionable maps, forecasts, and opportunity insights. Built for contractors, city staff, and community advocates who need a clearer picture of what is breaking, where investment is heading, and who can respond.",
+      "Plothole is a civic intelligence company I am building after debuting the platform on CodeTV's The Full Stack Show. What started as a product thesis — unify 311 complaints, open bids, permits, and community reports into one contractor-ready layer — is now a live SaaS platform piloting with contractors and townships across southeastern Pennsylvania. The goal is not to chase posted RFPs on a race to the bottom, but to help small contractors and municipal partners arrive with data-backed evidence that proves where infrastructure is failing and what it costs to fix.",
     problem:
-      "Infrastructure data lives in silos: 311 portals, PDF bid documents, weather APIs, and grant databases rarely talk to each other. Contractors miss opportunities, cities duplicate effort, and residents report the same potholes without seeing resolution patterns. There is no unified layer that connects civic signals to the people who can act on them.",
+      "Infrastructure data lives in silos: 311 portals, PDF bid documents, permit systems, and grant databases rarely talk to each other. Contractors spend hours scrolling archaic bid boards, guessing margins, and hoping they are the lowest bidder — while townships and procurement officers lack a unified view of recurring failures in their corridors. There is no shared intelligence layer connecting civic signals to the people who can respond before an RFP drops.",
     solution:
-      "Plothole aggregates and normalizes civic infrastructure signals into a single intelligence layer. Heat maps surface recurring issue clusters, contractor dashboards highlight bid and grant opportunities aligned to geography, and predictive views help stakeholders anticipate where maintenance demand will spike. The platform is designed to serve both public agencies and private contractors with role-appropriate views of the same underlying data.",
+      "Plothole aggregates Philadelphia 311 service requests, PHLContracts solicitations, L&I permit activity, and community hazard reports into a single contractor-ready intelligence platform. Live dashboards surface demand zones, corridor-level issue clusters, open bid values, and permit velocity by ZIP — turning scattered public records into 15-minute data-backed pitches. Contractors use it to write contracts proactively; townships and pilot partners use it to see where infrastructure stress is rising before it becomes a crisis.",
     role:
-      "Founder and lead engineer. I defined the product thesis, designed the data model for multi-source civic ingestion, and am building the full-stack platform—from API integrations and geospatial processing to the map-first frontend experience.",
+      "Founder and CEO. I debuted Plothole on CodeTV's The Full Stack Show, then transitioned from showcase build to operating company — defining the product thesis, building the full-stack platform, and leading pilot outreach with contractors and townships across southeastern Pennsylvania. I own everything from civic data ingestion and geospatial scoring to the map-first frontend, pricing model, and go-to-market with regional pilot partners.",
     techStack: [
-      "Node.js",
+      "Next.js",
       "React",
+      "Node.js",
       "PostgreSQL",
       "PostGIS",
       "REST APIs",
@@ -109,46 +120,55 @@ const projects = {
     ],
     features: [
       {
+        icon: "bi-broadcast",
+        title: "Live Civic Signals",
+        description:
+          "Real-time Philadelphia 311, open solicitations, permits, and community reports unified into one contractor intelligence feed.",
+      },
+      {
         icon: "bi-geo-alt",
-        title: "Issue Reporting",
+        title: "Demand Zones & Corridors",
         description:
-          "Capture and geolocate infrastructure issues with community-submitted reports tied to resolution tracking.",
-      },
-      {
-        icon: "bi-briefcase",
-        title: "Contractor Opportunity Intelligence",
-        description:
-          "Surface relevant bids, grants, and RFP signals mapped to the contractor's service area and specialty.",
-      },
-      {
-        icon: "bi-thermometer-half",
-        title: "Infrastructure Heat Maps",
-        description:
-          "Visualize recurring failure patterns across neighborhoods to prioritize maintenance and investment.",
+          "ZIP-level demand scoring and corridor monitoring that show where infrastructure failures cluster and contractor opportunity is highest.",
       },
       {
         icon: "bi-cash-stack",
-        title: "Bid & Grant Signals",
+        title: "Money on the Table",
         description:
-          "Aggregate public procurement and funding announcements into a searchable, location-aware feed.",
+          "Estimated work value from declared permit costs and open solicitations — so contractors know the scale of opportunity before they pitch.",
       },
       {
-        icon: "bi-graph-up-arrow",
-        title: "Predictive Civic Insights",
+        icon: "bi-thermometer-half",
+        title: "Permit Velocity Tracking",
         description:
-          "Forecast infrastructure stress using weather, seasonality, and historical repair data.",
+          "See which ZIP codes are heating up or cooling down based on permit activity and open civic issues month over month.",
       },
       {
-        icon: "bi-grid-3x3-gap",
-        title: "Stakeholder Dashboards",
+        icon: "bi-briefcase",
+        title: "Data-Backed Pitch Workflow",
         description:
-          "Role-based views for city staff, contractors, and community organizers on shared civic data.",
+          "Turn hours of municipal paperwork into a 15-minute evidence stack that procurement officers cannot ignore.",
+      },
+      {
+        icon: "bi-building",
+        title: "Township & Contractor Pilots",
+        description:
+          "Pilot partnerships across southeastern Pennsylvania connecting municipal stakeholders and trade contractors to shared civic data.",
       },
     ],
-    outcomes:
-      "Plothole is in active development with a validated thesis around contractor opportunity intelligence and civic heat mapping. Early prototypes demonstrate the ability to cross-reference 311-style issue density with seasonal weather data and public bid activity—giving stakeholders a view of infrastructure that did not exist in any single public tool.",
-    improvements:
-      "Next I would deepen real-time ingestion from municipal open-data feeds, add authenticated contractor profiles with alert subscriptions, and pilot with a single Philadelphia neighborhood to validate predictive maintenance forecasts against actual repair timelines.",
+    outcomes: [
+      "Featured on CodeTV's The Full Stack Show as a civic intelligence platform built for real-world contractor workflows.",
+      "Transitioned from post-show prototype to operating company with a live product at dev.getplothole.com.",
+      "Piloting with contractors and townships across southeastern Pennsylvania to validate demand-zone intelligence and proactive contract writing.",
+      "Live platform tracking 1,100+ open hazards, 40 active demand zones, and an estimated $61M+ in work on the table across Philadelphia pilot data.",
+    ],
+    nextSteps: [
+      "Expand township pilot partnerships across Bucks, Montgomery, Chester, and Delaware counties.",
+      "Add authenticated contractor profiles with trade-matched alert subscriptions and pipeline tracking.",
+      "Deepen real-time ingestion from municipal open-data feeds beyond Philadelphia.",
+      "Validate predictive maintenance forecasts against actual repair timelines with pilot partners.",
+    ],
+    improvements: null,
   },
 
   campfire: {
@@ -156,26 +176,36 @@ const projects = {
     displayTitle: "Tree House Books · Campfire",
     category: "community-systems",
     tagline:
-      "A universal operations dashboard replacing costly SaaS for Tree House Books.",
+      "A private operations dashboard replacing costly SaaS for Tree House Books staff and volunteers.",
     date: "June 2024 – Present",
-    status: "Live",
+    status: "Live · Private Portal",
+    privatePortal: true,
     client: "Tree House Books",
     links: {
       live: null,
       github: null,
       caseStudy: null,
     },
+    cover: {
+      src: "assets/img/projects/campfire-signup-cover.gif",
+      alt: "CampFire Dashboard sign-up flow — Tree House Books Philadelphia registration portal",
+    },
     images: [
-      "assets/img/portfolio/portfolio-2.webp",
-      "assets/img/portfolio/portfolio-5.webp",
-      "assets/img/portfolio/portfolio-6.webp",
+      {
+        src: "assets/img/projects/campfire-admin-dashboard.png",
+        alt: "CampFire Admin Dashboard — quick actions for members, book checkout, donations, programs, attendance, and metrics",
+      },
+      {
+        src: "assets/img/projects/campfire-metrics.png",
+        alt: "CampFire analytics — 12-month book checkout and member sign-up trend charts for Tree House Books",
+      },
     ],
     overview:
-      "Campfire is a custom internal dashboard built for Tree House Books, a Philadelphia nonprofit that distributes free books and runs youth literacy programs. It replaces a patchwork of third-party subscriptions, disconnected spreadsheets, and manual data entry with a single Node.js and React application tailored to how staff and volunteers actually work day to day.",
+      "Campfire is a custom internal dashboard built for Tree House Books, a Philadelphia nonprofit that distributes free books and runs youth literacy programs. It replaces a patchwork of third-party subscriptions, disconnected spreadsheets, and manual data entry with a single Node.js and React application tailored to how staff and volunteers actually work day to day. The platform runs as a private portal — authenticated access only for organizational staff, leadership, and volunteers.",
     problem:
       "Tree House Books relied on expensive SaaS tools and fragmented workflows to manage volunteers, track book distribution, monitor attendance, and audit program data. Staff spent hours reconciling exports across systems, and there was no unified view of operations accessible to different role levels across the organization.",
     solution:
-      "I designed and built Campfire as an in-house universal dashboard using Node.js, MongoDB, and React. The platform centralizes volunteer management, real-time analytics, data auditing, and book checkout tracking into role-based views—giving leadership, staff, and volunteers the specific tools they need without paying for features they do not use.",
+      "I designed and built Campfire as an in-house universal dashboard using Node.js, MongoDB, and React. The platform centralizes volunteer management, real-time analytics, data auditing, and book checkout tracking into role-based views behind a secure login — giving leadership, staff, and volunteers the specific tools they need without paying for features they do not use.",
     role:
       "Instructional Software Engineer and sole builder. I scoped requirements with organizational leadership, eliminated third-party dependencies, built the full-stack application, and provide ongoing mentorship in digital literacy for the teens who use and contribute to the platform.",
     techStack: [
