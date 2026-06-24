@@ -869,22 +869,22 @@ const projects = {
     client: null,
     accentColor: "#E8824A",
     links: {
-      live: null,
+      live: "https://challenge-orange.vercel.app/",
       github: null,
       caseStudy: null,
     },
     images: [
       {
-        src: "assets/img/portfolio/portfolio-portrait-1.webp",
-        alt: "Channel Orange exhibition concept — orange-tinted digital diorama with floating symbolic objects",
+        src: "assets/img/projects/channel-orange-hero.png",
+        alt: "No Signal Still Feeling — homepage with animated orange tile mosaic and exhibition navigation",
       },
       {
-        src: "assets/img/portfolio/portfolio-portrait-2.webp",
-        alt: "Channel Orange exhibition concept — atmospheric scene with cassette, phone, and memory objects in motion",
+        src: "assets/img/projects/channel-orange-themes.png",
+        alt: "Exhibition Essays — theme-based browsing with essays on love, excess, nostalgia, and the television frame",
       },
       {
-        src: "assets/img/portfolio/portfolio-portrait-4.webp",
-        alt: "Channel Orange exhibition concept — cinematic tornado and window composition inspired by the album",
+        src: "assets/img/projects/channel-orange-objects.png",
+        alt: "Recurring Objects — visual vocabulary cards for Television, Static, and other symbolic elements",
       },
     ],
     overview:
