@@ -1045,6 +1045,39 @@ section,
   margin-bottom: 0;
 }
 
+.about .as-seen-on {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.about .as-seen-on .as-seen-on-label {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 20%));
+  color: var(--contrast-color);
+  padding: 0.35rem 0.9rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.about .as-seen-on .as-seen-on-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
+
+.about .as-seen-on .as-seen-on-text a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .about .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -3225,6 +3258,147 @@ section,
   .service-details .service-info,
   .service-details .related-services {
     margin-top: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Featured / On CodeTV Section
+--------------------------------------------------------------*/
+.featured-codetv .featured-codetv-grid {
+  margin-top: 0.25rem;
+}
+
+.featured-codetv .featured-codetv-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  height: 100%;
+  min-height: 240px;
+  padding: 1.75rem;
+  padding-top: 2.75rem;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--accent-color), var(--surface-color) 88%) 0%,
+    var(--surface-color) 55%
+  );
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 65%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+a.featured-codetv-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.28),
+    0 0 0 1px color-mix(in srgb, var(--accent-color), transparent 50%);
+  color: inherit;
+}
+
+a.featured-codetv-card:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+.featured-codetv .featured-codetv-card--soon {
+  opacity: 0.82;
+  cursor: default;
+  border-style: dashed;
+  border-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+}
+
+.featured-codetv .featured-codetv-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  background-color: color-mix(in srgb, var(--default-color), transparent 88%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 75%);
+}
+
+.featured-codetv .featured-codetv-badge--finalist {
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 82%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+}
+
+.featured-codetv .featured-codetv-series {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-color);
+}
+
+.featured-codetv .featured-codetv-card h3 {
+  font-size: 1.35rem;
+  margin: 0;
+  color: var(--heading-color);
+}
+
+.featured-codetv .featured-codetv-blurb {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--default-color), transparent 18%);
+  margin: 0 0 0.5rem;
+  flex-grow: 1;
+}
+
+.featured-codetv .featured-codetv-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  transition: gap 0.2s ease;
+}
+
+a.featured-codetv-card:hover .featured-codetv-cta {
+  gap: 0.65rem;
+}
+
+.featured-codetv .featured-codetv-cta--muted {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-weight: 500;
+}
+
+@media (max-width: 767.98px) {
+  .featured-codetv .featured-codetv-card {
+    min-height: 0;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .featured-codetv .featured-codetv-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-codetv .featured-codetv-card,
+  .featured-codetv .featured-codetv-cta {
+    transition: none;
+  }
+
+  a.featured-codetv-card:hover {
+    transform: none;
+  }
+
+  a.featured-codetv-card:hover .featured-codetv-cta {
+    gap: 0.4rem;
   }
 }
 

@@ -74,11 +74,11 @@ const projects = {
     title: "Plothole",
     category: "civic-intelligence",
     tagline:
-      "Civic intelligence SaaS that helps contractors and townships across southeastern Pennsylvania turn public data into revenue — as seen on CodeTV's The Full Stack Show.",
+      "Civic intelligence SaaS that helps contractors and townships across southeastern Pennsylvania turn public data into revenue — finalist on CodeTV’s AWS The Full Stack series.",
     date: "2024 – Present",
     status: "Live · Piloting in SE Pennsylvania",
     piloting: true,
-    featuredIn: "CodeTV's The Full Stack Show",
+    featuredIn: "Finalist — CodeTV’s AWS The Full Stack series",
     client: null,
     links: {
       live: "https://dev.getplothole.com/",
@@ -100,13 +100,13 @@ const projects = {
       },
     ],
     overview:
-      "Plothole is a civic intelligence company I am building after debuting the platform on CodeTV's The Full Stack Show. What started as a product thesis — unify 311 complaints, open bids, permits, and community reports into one contractor-ready layer — is now a live SaaS platform piloting with contractors and townships across southeastern Pennsylvania. The goal is not to chase posted RFPs on a race to the bottom, but to help small contractors and municipal partners arrive with data-backed evidence that proves where infrastructure is failing and what it costs to fix.",
+      "Plothole is a civic intelligence company I am building after debuting as a finalist on CodeTV’s AWS The Full Stack series. What started as a product thesis — unify 311 complaints, open bids, permits, and community reports into one contractor-ready layer — is now a live SaaS platform piloting with contractors and townships across southeastern Pennsylvania. The goal is not to chase posted RFPs on a race to the bottom, but to help small contractors and municipal partners arrive with data-backed evidence that proves where infrastructure is failing and what it costs to fix.",
     problem:
       "Infrastructure data lives in silos: 311 portals, PDF bid documents, permit systems, and grant databases rarely talk to each other. Contractors spend hours scrolling archaic bid boards, guessing margins, and hoping they are the lowest bidder — while townships and procurement officers lack a unified view of recurring failures in their corridors. There is no shared intelligence layer connecting civic signals to the people who can respond before an RFP drops.",
     solution:
       "Plothole aggregates Philadelphia 311 service requests, PHLContracts solicitations, L&I permit activity, and community hazard reports into a single contractor-ready intelligence platform. Live dashboards surface demand zones, corridor-level issue clusters, open bid values, and permit velocity by ZIP — turning scattered public records into 15-minute data-backed pitches. Contractors use it to write contracts proactively; townships and pilot partners use it to see where infrastructure stress is rising before it becomes a crisis.",
     role:
-      "Founder and CEO. I debuted Plothole on CodeTV's The Full Stack Show, then transitioned from showcase build to operating company — defining the product thesis, building the full-stack platform, and leading pilot outreach with contractors and townships across southeastern Pennsylvania. I own everything from civic data ingestion and geospatial scoring to the map-first frontend, pricing model, and go-to-market with regional pilot partners.",
+      "Founder and CEO. I debuted Plothole as a finalist on CodeTV’s AWS The Full Stack series, then transitioned from showcase build to operating company — defining the product thesis, building the full-stack platform, and leading pilot outreach with contractors and townships across southeastern Pennsylvania. I own everything from civic data ingestion and geospatial scoring to the map-first frontend, pricing model, and go-to-market with regional pilot partners.",
     techStack: [
       "Next.js",
       "React",
@@ -157,7 +157,7 @@ const projects = {
       },
     ],
     outcomes: [
-      "Featured on CodeTV's The Full Stack Show as a civic intelligence platform built for real-world contractor workflows.",
+      "Finalist on CodeTV’s AWS The Full Stack series as a civic intelligence platform built for real-world contractor workflows.",
       "Transitioned from post-show prototype to operating company with a live product at dev.getplothole.com.",
       "Piloting with contractors and townships across southeastern Pennsylvania to validate demand-zone intelligence and proactive contract writing.",
       "Live platform tracking 1,100+ open hazards, 40 active demand zones, and an estimated $61M+ in work on the table across Philadelphia pilot data.",
